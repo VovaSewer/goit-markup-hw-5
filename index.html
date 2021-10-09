@@ -14,6 +14,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Document</title>
   </head>
@@ -126,21 +130,40 @@
           <h2 class="gallery-title">Чем мы занимаемся</h2>
           <ul class="galery-list list">
             <li class="gallery-item">
-              <img
-                src="./images/box1.jpg"
-                alt="человек и планшет"
-                width="370"
-              />
+              <div class="galery-item-thumb">
+                <img
+                  src="./images/box1.jpg"
+                  alt="человек и планшет"
+                  width="370"
+                />
+                <div class="galery-thumb-box">
+                  <p class="galery-thumb-title">Десктопные приложения</p>
+                </div>
+              </div>
             </li>
             <li class="gallery-item">
-              <img
-                src="./images/box2.jpg"
-                alt="ноутбук и человек с телефоном"
-                width="370"
-              />
+              <div class="galery-item-thumb">
+                <img
+                  src="./images/box2.jpg"
+                  alt="ноутбук и человек с телефоном"
+                  width="370"
+                />
+                <div class="galery-thumb-box">
+                  <p class="galery-thumb-title">Мобильные приложения</p>
+                </div>
+              </div>
             </li>
             <li class="gallery-item">
-              <img src="./images/box3.jpg" alt="планшет в руках" width="370" />
+              <div class="galery-item-thumb">
+                <img
+                  src="./images/box3.jpg"
+                  alt="планшет в руках"
+                  width="370"
+                />
+                <div class="galery-thumb-box">
+                  <p class="galery-thumb-title">Дизайнерские решения</p>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -239,7 +262,7 @@
                 <p class="team-profession">Marketing</p>
                 <ul class="team-icon-list list">
                   <li class="team-icon-item">
-                    <a href="" class="team-icon-link">
+                    <a href="" class="team-icon-link link">
                       <svg class="team-icon-svg" width="20" height="20">
                         <use href="./images/icons.svg#instagram"></use>
                       </svg>
@@ -419,5 +442,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
