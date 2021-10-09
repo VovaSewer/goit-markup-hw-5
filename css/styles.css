@@ -218,6 +218,49 @@ body {
   margin: 0 auto;
 }
 
+.backdrop{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 500ms ease, visibility 500ms ease ; 
+}
+
+.backdrop.is-hidden{
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal{
+  transform: scale(3) rotate(360deg) ;
+}
+
+.modal{
+  min-width: 528px;
+  min-height: 581px;
+  position: relative;
+  background: var(--background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 500ms ease;
+}
+
+.btn-close{
+  right: 8px;
+  top: 8px;
+  padding: 0;
+  border-radius: 50%;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 /* --------------ABOUT US-------------- */
 
 .about {
@@ -384,7 +427,7 @@ body {
   height: 44px;
   border-radius: 50%;
   cursor: pointer;
-  transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .team-icon-svg{
@@ -435,7 +478,7 @@ margin-bottom: 50px;
   border-radius: 4px;
   margin-left: 30px;
   cursor: pointer;
-  transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: border-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }  
 
 .clients-icon{
@@ -536,7 +579,7 @@ fill: #AFB1B8;
   border-radius: 50%;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.1);
-  transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .footer-icon-svg{
@@ -606,7 +649,7 @@ fill: #AFB1B8;
   color: var(--primary-title-color);
   border-radius: 4px;
   border: none;
-  transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .work-list {
@@ -623,12 +666,12 @@ fill: #AFB1B8;
 
 .work-text{
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0; 
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   padding: 63px 24px;
+  bottom: 0;
   color:var(--background-color);
   background-color:rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
