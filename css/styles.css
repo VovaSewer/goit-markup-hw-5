@@ -94,9 +94,11 @@ body {
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition-duration: 250ms; 
+  animation-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-link::after {
+.current::after {
   content:"";
   position: absolute;
   width: 100%;    
@@ -105,13 +107,6 @@ body {
   background-color:var(--accent-color);
   display: block;
   bottom: 0; 
-  opacity: 0;
-  transition-duration: 250ms; 
-  animation-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-link:hover:after{
-  opacity: 1;
 }
 
 .header-item:not(:last-child) {
